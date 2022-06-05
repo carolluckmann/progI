@@ -1,0 +1,17 @@
+<meta charset="utf-8" />
+<script>
+    // Elaborar um programa para um estacionamento. O programa deve ler o valor para cada 30 minutos de uso do estacionamento e o tempo que o carro ficou estacionado em minutos. Informe o valor a ser pago pelo cliente, sabendo que as frações extras de 30 minutos devem ser cobradas de forma integral.
+
+    // Exemplo:
+    // Valor para 30 minutos RS: 5.00
+    // Minutos de uso: 70
+    // Total a Pagar R$: 15.00
+
+    // entrada
+    const valorPorMeiaHora = Number(prompt(`Insira o valor cobrado por 30 minutos de uso do estacionamento (em R$):`))
+    const tempoUso = Number(prompt(`Insira o tempo (em minutos) que o carro ficou estacionado: `))
+    // processamento
+    const totalPagar = Math.ceil (tempoUso/30) * valorPorMeiaHora
+    // saida
+    document.write (`O valor a ser pago utilizando o estacionamento por ${tempoUso} minutos é R$${totalPagar.toFixed(2)}`)
+</script>
