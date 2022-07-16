@@ -1,0 +1,39 @@
+<script>
+    /*
+    //PROBLEMA
+    Um posto está vendendo combustíveis com a seguinte tabela de descontos:
+    Álcool:
+    - até 20 litros, desconto de 3% por litro
+    - acima de 20 litros, desconto de 5% por litro
+
+    Gasolina:
+    - até 20 litros, desconto de 4% por litro
+    - acima de 20 litros, desconto de 6% por litro
+    
+    Escreva um algoritmo que leia o número de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 6,50 o preço do litro do álcool é R$ 6,10.
+    */
+
+    //ENTRADA
+    const combustível = prompt(`Insira o tipo de combústivel que você deseja (A-Alcool | G-Gasolina): `).toUpperCase()
+    const litros = parseInt(prompt(`Insira quantos litros do combustível escolhido você quer:`))
+
+    //PROCESSAMENTO
+    const precoAlcool = 6.1
+    const precoGasolina = 6.5
+    let precoFinal = 0
+
+    if (combustível === `A`) {
+        if (litros <= 20) precoFinal = (precoAlcool) * (0.97) * (litros)
+        else precoFinal = (precoAlcool) * (0.95) * (litros)
+    }
+    else if (combustível === `G`) {
+        if (litros <= 20) precoFinal = (precoGasolina) * (0.96) * (litros)
+        else precoFinal = (precoGasolina) * (0.94) * (litros)
+    }
+    else {
+        alert(`Combustível indisponível/não existente!`)
+    }
+    //SAÍDA
+    document.write(`O valor a ser pago é R$${precoFinal.toFixed(2)}.`)
+
+</script>
