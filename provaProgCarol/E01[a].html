@@ -1,0 +1,30 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    //PROBLEMA
+    /*
+    Faça um script que pergunte ao Professor a quantidade de alunos que possui e a quantidade de turmas.
+    Se a média de alunos por turma for até 30 alunos, o programa deverá apresentar que é possível o professor trabalhar sozinho. Caso a média de alunos esteja entre 30 e 40, o programa deverá apresentar que será necessário ter um segundo professor no laboratório. Caso ultrapasse os 40 alunos, o programa deverá mostrar que será necessário dividir a turma em dois horários.
+    Apresente o resultado em tela.
+    */
+
+    //ENTRADA
+    const quantidadeAlunos = Number(prompt(`Professor. quantos alunos você possui?`))
+    const quantidadeTurmas = Number(prompt(`Professor, quantas turmas você possui?`))
+
+    //PROCESSAMENTO
+    const media = (quantidadeAlunos / quantidadeTurmas)
+
+    if (media < 30) {
+        alert(`A média de alunos por turma é ${media} alunos. É possível que você trabalhe sozinho.`)
+    }
+    else if ((media > 30) && (media < 40)) {
+        alert(`A média de alunos por turma é ${media} alunos. É necessário um segundo professor no laboratório.`)
+
+    }
+    else {
+        alert(`A média de alunos por turma é ${media} alunos. É necessário dividir a turma em dois horários.`)
+    }
+    //SAÍDA
+
+
+</script>

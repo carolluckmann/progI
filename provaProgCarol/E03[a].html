@@ -1,0 +1,66 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    //PROBLEMA
+    /*
+    Considere que o salário padrão pago pela empresa é de R$ 2.000,00.
+    Faça um script que pergunte ao trabalhador qual o turno que trabalha e também o cargo que ocupa.
+    Se o cargo for Operador, o funcionário receberá 10% a mais do salário padrão pela empresa. Caso o cargo seja Líder, o funcionário receberá 30% a mais do salário padrão pela empresa e, caso seja Encarregado, o funcionário receberá 50% a mais do salário padrão pago pela empresa.
+    Caso a hora de início do trabalho do funcionário seja 05:00, será pago um auxílio alimentação no valor de R$ 400,00. Caso o horário de início do trabalho do funcionário seja 13:00, o auxílio alimentação será de R$ 450,00. E, caso o horário de início do trabalho do funcionário seja 22:00, o auxílio alimentação será de R$ 550,00.
+    Apresente o salário final que é pago ao funcionário, calculando a porcentagem adicional e o auxílio alimentação.
+    */
+
+
+    //ENTRADA
+    const turno = prompt(`Em qual turno você trabalha? (M-matutino | V-vespertino | N- noturno)`).toUpperCase()
+    const cargo = prompt(`Qual cargo você ocupa?(O- operador | L- líder | E- encarregado`).toUpperCase()
+    let salarioPadrao = 2000
+    //PROCESSAMENTO
+    if (cargo === `O` && turno === `M`) {
+        let adicional = salarioPadrao + 200
+        let salarioFinal = adicional + 400
+        alert(`Salário pago: R$${salarioFinal.toFixed(2)}`)
+    }
+    else if (cargo === `L` && turno === `M`) {
+        let adicional = salarioPadrao + 600
+        let salarioFinal = adicional + 400
+        alert(`Salário pago: R$${salarioFinal.toFixed(2)}`)
+    }
+    else if (cargo === `E` && turno === `M`) {
+        let adicional = salarioPadrao + 1000
+        let salarioFinal = adicional + 400
+        alert(`Salário pago: R$${salarioFinal.toFixed(2)}`)
+    }
+    else if (cargo === `O` && turno === `V`) {
+        let adicional = salarioPadrao + 200
+        let salarioFinal = adicional + 450
+        alert(`Salário pago: R$${salarioFinal.toFixed(2)}`)
+    }
+    else if (cargo === `L` && turno === `V`) {
+        let adicional = salarioPadrao + 600
+        let salarioFinal = adicional + 450
+        alert(`Salário pago: R$${salarioFinal.toFixed(2)}`)
+    }
+    else if (cargo === `E` && turno === `V`) {
+        let adicional = salarioPadrao + 1000
+        let salarioFinal = adicional + 450
+        alert(`Salário pago: R$${salarioFinal.toFixed(2)}`)
+    }
+    else if (cargo === `O` && turno === `N`) {
+        let adicional = salarioPadrao + 200
+        let salarioFinal = adicional + 550
+        alert(`Salário pago: R$${salarioFinal.toFixed(2)}`)
+    }
+    else if (cargo === `L` && turno === `N`) {
+        let adicional = salarioPadrao + 600
+        let salarioFinal = adicional + 550
+        alert(`Salário pago: R$${salarioFinal.toFixed(2)}`)
+    }
+    else if (cargo === `E` && turno === `N`) {
+        let adicional = salarioPadrao + 1000
+        let salarioFinal = adicional + 550
+        alert(`Salário pago: R$${salarioFinal.toFixed(2)}`)
+    }
+    //SAÍDA
+
+
+</script>
